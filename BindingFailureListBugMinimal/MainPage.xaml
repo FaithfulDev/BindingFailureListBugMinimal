@@ -10,14 +10,15 @@
             Padding="30,0"
             Spacing="25">
 
-            <CollectionView ItemsSource="{Binding Examples}">
-                <CollectionView.ItemTemplate>
+            <ListView ItemsSource="{Binding Examples}">
+                <ListView.ItemTemplate>
                     <DataTemplate x:DataType="local:ExampleModel">
-                        <Label Text="{Binding Name}" />
+                        <ViewCell>
+                            <Label Text="{Binding Name}" />
+                        </ViewCell>
                     </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-
+                </ListView.ItemTemplate>
+            </ListView>
 
         </VerticalStackLayout>
     </ScrollView>
